@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath,amsfonts}
+\usepackage{graphicx}
+\usepackage[authoryear]{natbib}
+\usepackage{xr}
+\externaldocument{cs_texas}
+\usepackage[unicode=true]
+ {hyperref}
+%\usepackage{breakurl}
+
+\usepackage{array}
+
+\usepackage[centerlast,bf,justification=justified,singlelinecheck=false]{caption}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{calc} 
+\usepackage{tabularx}
+\usepackage{booktabs}  
+\usepackage[flushleft]{threeparttable}
+\usepackage{pdflscape}
+
+\usepackage[title]{appendix}
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+
+%\setlength\labelsep{0pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  PACKAGES FOR COMMENTING
+% THIS ADDS TEXT BOXES IN THE MARGIN
+\usepackage[colorinlistoftodos,textsize=small]{todonotes}
+
+% IF SELECTED, COMMAND WILL NOT DISPLAY COMMENTED TEXT  
+%\newcommand{\comment}[1]{}  %comment not shown
+
+%IF SELECTED, COMMAND WILL PRINT COMMENTED TEXT IN BLUE  
+\newcommand{\comment}[1]
+{{\bfseries \color{red} #1}} %comment shown
+
+\newcommand{\inputy}[1]{\input{#1}\unskip}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+\oddsidemargin 0in \evensidemargin 0in \topmargin 0in \columnsep 10pt
+\columnseprule 0pt \marginparwidth 90pt \marginparsep 11pt
+\marginparpush 5pt \headheight 0pt \headsep 0pt \textheight 9in
+\textwidth 6.5in
+
+\usepackage{setspace}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!80!black},
+    citecolor={blue!80!black},
+    urlcolor={blue!80!black}
+}
+
+%THIS ALLOWS US TO HIDE FACT DRAFT WAS COMPILED THE DAY OF SUBMISSION 
+\usepackage{datetime2,datetime2-calc}
+\DTMnewdatestyle{Myyyy}{%
+  \renewcommand*{\DTMdisplaydate}[4]{\DTMmonthname{##2}~##1}%
+  \renewcommand*{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+\DTMsetdatestyle{Myyyy}
+
+% Ryan Kellogg's custom figure note function
+\DeclareTextFontCommand{\fignotefont}{\normalfont\footnotesize}
+\newcommand{\fignote}[2][\linewidth]{
+    \begin{minipage}[]{#1}
+        \vspace{12pt}
+        \fignotefont{#2}
+    \end{minipage}}
+
+\makeatletter
+
+%COMBINE MULTIPLE TABLES IN A FLOAT	
+\usepackage[position=top]{subfig}
+\captionsetup{position=top}
+
+%\@ifundefined{showcaptionsetup}{}{%
+%	\PassOptionsToPackage{caption=false}{subfig}}
+%\usepackage{subfig}
+%\makeatother
+
+%\renewcommand{\thesection}{\Roman{section}} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\begin{document}
+
+\title{Online Appendix For \\ ``Relinquishing Riches: \\ Auctions vs Informal Negotiations \\ in Texas Oil and Gas Leasing''
+\thanks{Both authors declare they have no interests, financial or otherwise, that relate to the research described in this paper, nor do they have any current ties, directly or indirectly to the energy industry. We thank participants at numerous seminars, as well as Steve Cicala, Piotr Dworczak, Aaron Flaaen, Timothy Fitzgerald, Ryan Kellogg, Peter Maniloff, and Cythina Lin Lawell for helpful comments.  Yixin Sun, Eric Karsten, Devin McNulty and Grace Park provided excellent research assistance. Code for replication available at \href{https://github.com/rlsweeney/public_cs_texas}{https://github.com/rlsweeney/public\_cs\_texas}.}
+\vspace{10pt}}
+
+\author{Thomas R. Covert \thanks{University of Chicago Booth School of Business and NBER, \protect\href{mailto:Thomas.Covert@chicagobooth.edu}{Thomas.Covert@chicagobooth.edu}.}
+\\
+ Richard L. Sweeney \thanks{Boston College, \protect\href{mailto:sweeneri@bc.edu}{sweeneri@bc.edu}.}}
+
+\date{\today \\
+ \vspace{0.5cm}
+}
+\maketitle
+
+\setcounter{page}{1} \onehalfspace
+
+\include{appendix_content}
+\bibliographystyle{econ}
+\bibliography{cs_texas}
+
+\end{document}
+
+
+

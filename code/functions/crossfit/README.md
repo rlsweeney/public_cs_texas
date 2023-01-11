@@ -1,0 +1,1 @@
+This code originally comes from Yixin Sun's in-progress R package, `crossfit`, which she wrote as an RA supporting this project.  For more information, visit: https://github.com/yixinsun1216/crossfit
